@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 :root {
-  --primary-color: black;
-  --secondary-color: #7c3aed;
-  --light-grey: #f9fafb;
-  --dark-grey: #6b7280;
-  /*-----violet----tailwind----*/
+	--primary-color: black;
+	--secondary-color: #7c3aed;
+	--light-grey: #f9fafb;
+	--dark-grey: #6b7280;
+	--light-green: #baffb4;
+	--yellow: #fbf46d;
+	/*-----violet----tailwind----*/
 }
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 /* Remove default margin */
@@ -26,43 +28,44 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+	margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+	padding: 0;
 }
 
 .list-inline {
-  display: inline;
-  margin: 0 2vw;
+	display: inline;
+	margin: 0 2vw;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  color: black;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	color: black;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -70,123 +73,188 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 /* Hyperlinks*/
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .active {
-  border-bottom: 4px solid #f5f3ff;
-  font-weight: bold;
+	border-bottom: 4px solid #f5f3ff;
+	font-weight: bold;
 }
 /* ------container -----------*/
 .container {
-  height: 100vh;
-  max-width: 100vw;
+	/* 	height: 100vh; */
+	padding: 5rem;
+	max-width: 100vw;
 }
 
 .centered-container {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .grey-container {
-  background: var(--light-grey);
-}
-
-.shadow-container {
+	background: var(--light-grey);
 }
 
 .section-title {
-  text-align: center;
-  padding: 1rem 0;
+	text-align: center;
+	padding: 1rem 0;
 }
 .section-subtitle {
-  text-align: center;
-  color: var(--dark-grey);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+	text-align: center;
+	color: var(--dark-grey);
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
 }
 
 /* ------flex-----------*/
 .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .flex-around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .box {
-  box-shadow: 0 1px 25px rgb(146 161 176 / 15%);
-  margin: 1rem;
-  padding: 1rem;
-  width: 20%;
+	box-shadow: 0 1px 25px rgb(146 161 176 / 15%);
+	margin: 1rem;
+	padding: 1rem;
+	width: 40%;
 }
 
 /* ------typography-----------*/
 .header {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 .highlight {
-  color: var(--secondary-color);
+	color: var(--secondary-color);
 }
 
 /* ------buttons-----------*/
 .btn {
-  border: none;
-  color: white;
-  border-radius: 0.5rem;
-  padding: 0.75rem 2rem;
-  margin-top: 1rem;
+	border: none;
+	color: white;
+	border-radius: 0.5rem;
+	padding: 0.75rem 2rem;
+	margin: 1rem 0;
+	box-shadow: var(--secondary-color) 0px 6px 18px -5px;
+	font-size: 1.2rem;
+	font-weight: 400;
+	cursor: pointer;
 }
 
 .btn-purple {
-  background: var(--secondary-color);
+	background: var(--secondary-color);
+}
+
+.btn-green {
+	background: var(--light-green);
+	box-shadow: var(--light-green) 0px 6px 18px -5px;
+}
+
+.btn-inverted-green {
+	background: white;
+	box-shadow: #c8d1e2 0px 6px 18px -5px;
+	color: var(--light-green);
+}
+
+.btn-yellow {
+	background: var(--yellow);
+	box-shadow: var(--yellow) 0px 6px 18px -5px;
+}
+
+.btn-inverted-yellow {
+	background: white;
+	box-shadow: #c8d1e2 0px 6px 18px -5px;
+	color: var(--yellow);
 }
 
 .navigation {
-  background: linear-gradient(to left, #a18cd1, #fbc2eb);
-  border-bottom-left-radius: 1rem;
-  box-shadow: 0 15px 4px rgb(146 161 176 / 30%);
-  padding-left: 1vw;
+	background: linear-gradient(to left, #a18cd1, #fbc2eb);
+	border-bottom-left-radius: 1rem;
+	box-shadow: 0 15px 4px rgb(146 161 176 / 30%);
+	padding-left: 1vw;
 }
 
 .tech-image {
-  height: 2rem;
-  width: 2rem;
-  margin: auto;
+	height: 2rem;
+	width: 2rem;
+	margin: auto;
 }
 
 .tech-desc {
-  text-align: center;
-  color: var(--dark-grey);
-  margin-top: 0.5rem;
+	text-align: center;
+	color: var(--dark-grey);
+	margin-top: 0.5rem;
 }
 
 .tech-stack {
-  margin: 1.5rem 1.5rem;
-  width: 6rem;
-  background: white;
-  padding: 1rem;
+	margin: 1.5rem 1.5rem;
+	width: 6rem;
+	background: none;
+	padding: 1rem;
 }
 
 .tech-row {
-  margin: 0;
+	margin: 0;
+}
+
+.hero {
+	margin: 3.5rem;
+}
+/* ------footer-----------*/
+
+.footer {
+	background-color: var(--light-grey);
+	padding: 2rem 0rem;
+	text-align: center;
+	color: black;
+	border-top-right-radius: 1rem;
+	box-shadow: 0 1px 25px #e5e7eb;
+}
+
+.footer-header {
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.link > img {
+	display: inline;
+	width: 2rem;
+}
+
+/* ------Workbox styling-----------*/
+.box-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0.5rem auto;
+}
+
+.box-desc {
+	text-align: justify;
+	color: var(--dark-grey);
+}
+
+.project-hero {
+	margin: 0 3.5rem;
 }
